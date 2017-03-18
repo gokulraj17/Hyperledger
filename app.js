@@ -174,14 +174,14 @@ app.post('/placeFIOrders', function (req, res) {
 		console.log(typeof(orders));
 		var request_obj = {
 				method: 'POST', // do POST
-			    url: 'https://505db20ccb684d54a65f14af73f0b7c9-vp0.us.blockchain.ibm.com:5001/chaincode', // here only the domain name
+			    url: 'https://3a7888fc481d44c59ac6716e6e0bdc90-vp0.us.blockchain.ibm.com:5004/chaincode', // here only the domain name
 			    json: {
 			        "jsonrpc": "2.0",
 			        "method": "invoke",
 			        "params": {
 			            "type": 1,
 			            "chaincodeID": {
-			                "name": "bf67032e323b0c51984eefa124825fa93d79c5b8d6337308cd58b2d80178d428"
+			                "name": "68f6d5db92db45cc8bd94b5a0711c5fdbc0d1ca01eeccac36e285632165165cb"
 			            },
 			            "ctorMsg": {
 			              "function": "createOrdersByFI",
@@ -228,14 +228,14 @@ app.get('/getFIOrders', function (req, res) {
 	try{
 		var request_obj = {
 			    method: 'POST', // do POST
-			    url: 'https://505db20ccb684d54a65f14af73f0b7c9-vp0.us.blockchain.ibm.com:5001/chaincode', // here only the domain name
+			    url: 'https://3a7888fc481d44c59ac6716e6e0bdc90-vp0.us.blockchain.ibm.com:5004/chaincode', // here only the domain name
 			    json: {
 			        "jsonrpc": "2.0",
 			        "method": "query",
 			        "params": {
 			            "type": 1,
 			            "chaincodeID": {
-			                "name": "bf67032e323b0c51984eefa124825fa93d79c5b8d6337308cd58b2d80178d428"
+			                "name": "68f6d5db92db45cc8bd94b5a0711c5fdbc0d1ca01eeccac36e285632165165cb"
 			            },
 			            "ctorMsg": {
 			              "function": "getAllOrdersForFIMap",
@@ -280,14 +280,14 @@ app.get('/getBrOrders', function (req, res) {
 	try{
 		var request_obj = {
 			    method: 'POST', // do POST
-			    url: 'https://505db20ccb684d54a65f14af73f0b7c9-vp1.us.blockchain.ibm.com:5001/chaincode', // here only the domain name
+			    url: 'https://3a7888fc481d44c59ac6716e6e0bdc90-vp1.us.blockchain.ibm.com:5004/chaincode', // here only the domain name
 			    json: {
 			        "jsonrpc": "2.0",
 			        "method": "query",
 			        "params": {
 			            "type": 1,
 			            "chaincodeID": {
-			                "name": "bf67032e323b0c51984eefa124825fa93d79c5b8d6337308cd58b2d80178d428"
+			                "name": "68f6d5db92db45cc8bd94b5a0711c5fdbc0d1ca01eeccac36e285632165165cb"
 			            },
 			            "ctorMsg": {
 			              "function": "getAllOrdersForBrokerBasedOnStatus",
@@ -334,14 +334,14 @@ app.get('/getSeOrders', function (req, res) {
 	try{
 		var request_obj = {
 			    method: 'POST', // do POST
-			    url: 'https://505db20ccb684d54a65f14af73f0b7c9-vp3.us.blockchain.ibm.com:5001/chaincode', // here only the domain name
+			    url: 'https://3a7888fc481d44c59ac6716e6e0bdc90-vp3.us.blockchain.ibm.com:5004/chaincode', // here only the domain name
 			    json: {
 			        "jsonrpc": "2.0",
 			        "method": "query",
 			        "params": {
 			            "type": 1,
 			            "chaincodeID": {
-			                "name": "bf67032e323b0c51984eefa124825fa93d79c5b8d6337308cd58b2d80178d428"
+			                "name": "68f6d5db92db45cc8bd94b5a0711c5fdbc0d1ca01eeccac36e285632165165cb"
 			            },
 			            "ctorMsg": {
 			              "function": "getAllOrdersForSEBasedOnStatus",
@@ -387,14 +387,14 @@ app.put('/ConfirmOrders', function (req, res) {
 	try{
 		var request_obj = {
 			    method: 'POST', // do POST
-			    url: 'https://505db20ccb684d54a65f14af73f0b7c9-vp1.us.blockchain.ibm.com:5001/chaincode', // here only the domain name
+			    url: 'https://3a7888fc481d44c59ac6716e6e0bdc90-vp1.us.blockchain.ibm.com:5004/chaincode', // here only the domain name
 			    json: {
 			        "jsonrpc": "2.0",
 			        "method": "invoke",
 			        "params": {
 			            "type": 1,
 			            "chaincodeID": {
-			                "name": "bf67032e323b0c51984eefa124825fa93d79c5b8d6337308cd58b2d80178d428"
+			                "name": "68f6d5db92db45cc8bd94b5a0711c5fdbc0d1ca01eeccac36e285632165165cb"
 			            },
 			            "ctorMsg": {
 			              "function": "processFIOrdersForConfirmationBySE",
@@ -443,14 +443,14 @@ app.put('/SettleTrades', function (req, res) {
 	try{
 		var request_obj = {
 			    method: 'POST', // do POST
-			    url: 'https://505db20ccb684d54a65f14af73f0b7c9-vp3.us.blockchain.ibm.com:5001/chaincode', // here only the domain name
+			    url: 'https://3a7888fc481d44c59ac6716e6e0bdc90-vp3.us.blockchain.ibm.com:5004/chaincode', // here only the domain name
 			    json: {
 			        "jsonrpc": "2.0",
 			        "method": "invoke",
 			        "params": {
 			            "type": 1,
 			            "chaincodeID": {
-			                "name": "bf67032e323b0c51984eefa124825fa93d79c5b8d6337308cd58b2d80178d428"
+			                "name": "68f6d5db92db45cc8bd94b5a0711c5fdbc0d1ca01eeccac36e285632165165cb"
 			            },
 			            "ctorMsg": {
 			              "function": "clearAndSettleTrades",
@@ -498,14 +498,14 @@ app.get('/viewCustOrders', function (req, res) {
 	try{
 		var request_obj = {
 			    method: 'POST', // do POST
-			    url: 'https://505db20ccb684d54a65f14af73f0b7c9-vp0.us.blockchain.ibm.com:5001/chaincode', // here only the domain name
+			    url: 'https://3a7888fc481d44c59ac6716e6e0bdc90-vp0.us.blockchain.ibm.com:5004/chaincode', // here only the domain name
 			    json: {
 			        "jsonrpc": "2.0",
 			        "method": "query",
 			        "params": {
 			            "type": 1,
 			            "chaincodeID": {
-			                "name": "bf67032e323b0c51984eefa124825fa93d79c5b8d6337308cd58b2d80178d428"
+			                "name": "68f6d5db92db45cc8bd94b5a0711c5fdbc0d1ca01eeccac36e285632165165cb"
 			            },
 			            "ctorMsg": {
 			              "function": "getAllOrdersForCustodianBasedOnStatus",
@@ -550,14 +550,14 @@ app.get('/viewHoldings', function (req, res) {
 	try{
 		var request_obj = {
 			    method: 'POST', // do POST
-			    url: 'https://505db20ccb684d54a65f14af73f0b7c9-vp0.us.blockchain.ibm.com:5001/chaincode', // here only the domain name
+			    url: 'https://3a7888fc481d44c59ac6716e6e0bdc90-vp0.us.blockchain.ibm.com:5004/chaincode', // here only the domain name
 			    json: {
 			        "jsonrpc": "2.0",
 			        "method": "query",
 			        "params": {
 			            "type": 1,
 			            "chaincodeID": {
-			                "name": "bf67032e323b0c51984eefa124825fa93d79c5b8d6337308cd58b2d80178d428"
+			                "name": "68f6d5db92db45cc8bd94b5a0711c5fdbc0d1ca01eeccac36e285632165165cb"
 			            },
 			            "ctorMsg": {
 			              "function": "getAllHoldingsForFI",
@@ -602,14 +602,14 @@ app.get('/viewTransactionBasedOnStock', function (req, res) {
 	try{
 		var request_obj = {
 			    method: 'POST', // do POST
-			    url: 'https://505db20ccb684d54a65f14af73f0b7c9-vp0.us.blockchain.ibm.com:5001/chaincode', // here only the domain name
+			    url: 'https://3a7888fc481d44c59ac6716e6e0bdc90-vp0.us.blockchain.ibm.com:5004/chaincode', // here only the domain name
 			    json: {
 			        "jsonrpc": "2.0",
 			        "method": "query",
 			        "params": {
 			            "type": 1,
 			            "chaincodeID": {
-			                "name": "bf67032e323b0c51984eefa124825fa93d79c5b8d6337308cd58b2d80178d428"
+			                "name": "68f6d5db92db45cc8bd94b5a0711c5fdbc0d1ca01eeccac36e285632165165cb"
 			            },
 			            "ctorMsg": {
 			              "function": "getAllTransactionsForFIBasedOnStockId",
